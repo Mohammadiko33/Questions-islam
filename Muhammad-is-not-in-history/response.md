@@ -1,6 +1,9 @@
 # ادعا ملحد
 
-[مشاهده ویدیو](./claim.mp4)
+<video width="320" height="240" controls>
+  <source src="claim.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 # پاسخ 
 
