@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ادعاهای ملحدین</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="title">ادعاهای اتئیست‌ها و ملحدین ضد اسلامی</div>
+
+  <div class="container">
+    <!-- آیتم 1 -->
+    <div class="item">
+      <a href="./Muhammad-is-not-in-history/response.html">
+        <img src="./Muhammad-is-not-in-history/evidence/1.png" alt="Placeholder Image">
+        <div class="gradient"></div>
+        <div class="text">در تاریخ<br>پیام اسلام وجود ندارد</div>
+      </a>
+      <div class="actions">
+        <button class="like-btn" onclick="likeItem()">لایک</button>
+        <button class="dislike-btn" onclick="dislikeItem()">دیس‌لایک</button>
+      </div>
+    </div>
+
+    <!-- آیتم 2 -->
+    <div class="item">
+      <a href="https://example.com/page2.html">
+        <img src="./Muhammad-is-not-in-history/evidence/1.png" alt="Placeholder Image">
+        <div class="gradient"></div>
+        <div class="text">آیا محمد<br>پیامبر واقعی بود؟</div>
+      </a>
+      <div class="actions">
+        <button class="like-btn" onclick="likeItem()">لایک</button>
+        <button class="dislike-btn" onclick="dislikeItem()">دیس‌لایک</button>
+      </div>
+    </div>
+
+    <!-- آیتم 3 -->
+    <div class="item">
+      <a href="https://example.com/page3.html">
+        <img src="./Muhammad-is-not-in-history/evidence/1.png" alt="Placeholder Image">
+        <div class="gradient"></div>
+        <div class="text">علم جدید<br>اثبات کرده که قرآن اشتباه است!</div>
+      </a>
+      <div class="actions">
+        <button class="like-btn" onclick="likeItem()">لایک</button>
+        <button class="dislike-btn" onclick="dislikeItem()">دیس‌لایک</button>
+      </div>
+    </div>
+
+    <!-- آیتم 4 -->
+    <div class="item">
+      <a href="https://example.com/page4.html">
+        <img src="./Muhammad-is-not-in-history/evidence/1.png" alt="Placeholder Image">
+        <div class="gradient"></div>
+        <div class="text">آیا قرآن<br>کتابی بشری است؟</div>
+      </a>
+      <div class="actions">
+        <button class="like-btn" onclick="likeItem()">لایک</button>
+        <button class="dislike-btn" onclick="dislikeItem()">دیس‌لایک</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function dislikeItem() {
+      const message = prompt("لطفاً دلیلتان را بنویسید که چرا دیس لایک کردید.");
+      if (message) {
+        window.location.href = `mailto:example@example.com?subject=دیس لایک&body=من پشت فلانتو دیس لایک کردم بخاطر اینکه ...\n${message}`;
+      }
+    }
+
+    function likeItem() {
+      let likes = localStorage.getItem("likes") || 0;
+      likes++;
+      localStorage.setItem("likes", likes);
+      alert("شما لایک کردید. تعداد لایک‌ها: " + likes);
+    }
+  </script>
+
+</body>
+</html>
