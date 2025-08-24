@@ -1,6 +1,6 @@
 # ادعا ملحد
 
-<video src="./claim.mp4" controls style="width:100%;"></video>
+[مشاهده ویدیو](./claim.mp4)
 
 # پاسخ 
 
