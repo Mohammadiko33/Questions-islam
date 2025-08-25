@@ -21,10 +21,12 @@
         </a>
         <div class="actions">
           <button class="like-btn" onclick="likeItem(this)">لایک</button>
-          <button class="dislike-btn" onclick="dislikeItem(this)">دیس‌لایک</button>
+          <button class="dislike-btn" onclick="dislikeItem(this)">
+            دیس‌لایک
+          </button>
         </div>
       </div>
-      
+
       <div class="item">
         <a href="./Muhammad-is-not-in-history/response.html">
           <img
@@ -36,22 +38,29 @@
         </a>
         <div class="actions">
           <button class="like-btn" onclick="likeItem(this)">لایک</button>
-          <button class="dislike-btn" onclick="dislikeItem(this)">دیس‌لایک</button>
+          <button class="dislike-btn" onclick="dislikeItem(this)">
+            دیس‌لایک
+          </button>
         </div>
       </div>
     </div>
-
 
     <script>
       function dislikeItem(button) {
         const item = button.closest(".item");
         const postTitle = item.querySelector(".text").innerText.trim();
 
-        const message = prompt("لطفاً دلیلتان را بنویسید که چرا دیس لایک کردید.");
+        const message = prompt(
+          "لطفاً دلیلتان را بنویسید که چرا دیس لایک کردید."
+        );
         if (message) {
           const subject = `دیس‌لایک روی پست: ${postTitle}`;
           const body = `کاربر روی پست زیر دیس‌لایک کرده است:\n\n"${postTitle}"\n\nپیام کاربر:\n${message}`;
-          window.location.href = `mailto:developer-iko-mike@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+          const mailtoLink = `mailto:developer-iko-mike@gmail.com?subject=${encodeURIComponent(
+            subject
+          )}&body=${encodeURIComponent(body)}`;
+          window.location.href = mailtoLink;
         }
       }
 
@@ -63,7 +72,9 @@
         likes++;
         localStorage.setItem("likes", likes);
 
-        alert(`شما پست "${postTitle}" را لایک کردید. تعداد کل لایک‌ها: ${likes}`);
+        alert(
+          `شما پست "${postTitle}" را لایک کردید. تعداد کل لایک‌ها: ${likes}`
+        );
       }
     </script>
   </body>
