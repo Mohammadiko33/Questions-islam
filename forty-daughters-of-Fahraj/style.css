@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("../Vazir.woff2") format("woff2");
+}
+
+body {
+  font-family: "Vazir", sans-serif;
+  line-height: 1.9;
+  background: #f9f9f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 850px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+  margin-top: 1.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  border-right: 4px solid #4caf50;
+  padding-right: 0.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  text-align: justify;
+  margin: 1rem 0;
+}
+
+.video-wrapper {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+video {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 70%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hidden-content {
+  display: none;
+}
+
+.note {
+  background: #f1f8e9;
+  border-right: 4px solid #8bc34a;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.note h2 {
+  margin-top: 0;
+  color: #558b2f;
+}
