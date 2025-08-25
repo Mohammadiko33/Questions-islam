@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("../Vazir.woff2") format("woff2");
+}
+
+body {
+  font-family: "Vazir", sans-serif;
+  line-height: 1.9;
+  background: #f5f6fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 850px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+  margin-top: 1.2rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  border-right: 4px solid #4caf50;
+  padding-right: 0.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.video-wrapper {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+video {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 75%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* حالت مخفی */
+.hidden-content {
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+}
+
+/* وقتی فعال میشه */
+.show {
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.extra-box {
+  background: #e3f2fd;
+  border-right: 5px solid #2196f3;
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.extra-box h2 {
+  margin-top: 0;
+  color: #0d47a1;
+}
+
+.extra-box ul {
+  padding-right: 1.2rem;
+}
+
+.extra-box li {
+  margin-bottom: 0.6rem;
+}
+
+/* اول مخفی کن که ارتفاع نگیره */
+.hidden-content {
+  display: none;
+}
+
+/* وقتی باید نمایش داده بشه با انیمیشن ظاهر کن */
+.show {
+  display: block;
+  animation: fadeSlideIn 700ms ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
