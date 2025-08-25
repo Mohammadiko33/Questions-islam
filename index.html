@@ -11,6 +11,20 @@
 
     <div class="container">
       <div class="item">
+        <a href="./Behasht-in-qatar/response.html">
+          <img src="./Behasht-in-qatar/cover.png" alt="Placeholder Image" />
+          <div class="gradient"></div>
+          <div class="text">دروغی به نام بهشت !</div>
+        </a>
+        <div class="actions">
+          <button class="like-btn" onclick="likeItem(this)">لایک</button>
+          <button class="dislike-btn" onclick="dislikeItem(this)">
+            دیس‌لایک
+          </button>
+        </div>
+      </div>
+
+      <div class="item">
         <a href="./Marred-Muhammad-with-girl-9year-old/responsive.html">
           <img
             src="./Marred-Muhammad-with-girl-9year-old/cover.jpg"
@@ -50,19 +64,25 @@
         const item = button.closest(".item");
         const postTitle = item.querySelector(".text").innerText.trim();
 
+        // ساخت لینک تلگرام قبل از prompt
+        const telegramLink = document.createElement("a");
+        telegramLink.target = "_blank";
+
         const message = prompt(
           "لطفاً دلیلتان را بنویسید که چرا دیس لایک کردید."
         );
-        if (message) {
-          // متن کامل برای تلگرام
-          const telegramMessage = `📌 پست: ${postTitle}\n\n💬 پیام کاربر:\n${message}`;
 
-          // لینک تلگرام به بات یا یوزرنیم
-          // کاربر باز می‌کنه و خودش ارسال می‌کنه
-          const telegramLink = `https://t.me/DevMiko?text=${encodeURIComponent(
+        if (message !== null && message.trim() !== "") {
+          const telegramMessage = `📌 پست: ${postTitle}\n\n💬 پیام کاربر:\n${message}`;
+          telegramLink.href = `https://t.me/DevMiko?text=${encodeURIComponent(
             telegramMessage
           )}`;
-          window.open(telegramLink, "_blank");
+          // اضافه کردن به بدنه و کلیک مستقیم
+          document.body.appendChild(telegramLink);
+          telegramLink.click();
+          document.body.removeChild(telegramLink);
+        } else {
+          alert("لطفاً متن خود را وارد کنید تا ارسال شود.");
         }
       }
 
@@ -70,15 +90,21 @@
         const item = button.closest(".item");
         const postTitle = item.querySelector(".text").innerText.trim();
 
+        const telegramLink = document.createElement("a");
+        telegramLink.target = "_blank";
+
         const message = prompt("می‌خوای چیزی همراه لایک اضافه کنی؟");
+
         const telegramMessage = `👍 پست: ${postTitle}\n💖 کاربر پست رو لایک کرد!\n💬 پیام کاربر: ${
           message || ""
         }`;
-
-        const telegramLink = `https://t.me/DevMiko?text=${encodeURIComponent(
+        telegramLink.href = `https://t.me/DevMiko?text=${encodeURIComponent(
           telegramMessage
         )}`;
-        window.open(telegramLink, "_blank");
+
+        document.body.appendChild(telegramLink);
+        telegramLink.click();
+        document.body.removeChild(telegramLink);
       }
     </script>
   </body>

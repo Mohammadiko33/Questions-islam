@@ -12,6 +12,10 @@ body {
   text-align: right;
 }
 
+* , button , input {
+  font-family: "Vazir", Arial, sans-serif;
+}
+
 .title {
   font-size: 28px;
   text-align: center;
@@ -49,6 +53,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  filter: blur(4px);
 }
 
 .gradient {
