@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("../Vazir.woff2") format("woff2");
+}
+
+body {
+  font-family: "Vazir", sans-serif;
+  line-height: 1.9;
+  background: #f9f9f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 850px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+  margin-top: 1.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  border-right: 4px solid #4caf50;
+  padding-right: 0.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  text-align: justify;
+  margin: 1rem 0;
+}
+
+.video-wrapper {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+video {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 70%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hidden-content {
+  display: none;
+}
+
+/* انیمیشن ورود محتوا */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.show-content {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* باکس نکات تکمیلی */
+.extra-box {
+  margin-top: 2rem;
+  padding: 1.5rem 1.2rem;
+  background: #e3f2fd; /* آبی خیلی ملایم */
+  border-left: 6px solid #2196f3; /* بوردر آبی سمت چپ */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extra-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(33, 150, 243, 0.25);
+}
+
+.extra-box h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #0d47a1;
+  font-size: 1.2rem;
+}
+
+.extra-box ul {
+  margin: 0;
+  padding-right: 1.2rem;
+}
+
+.extra-box li {
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #333;
+}
