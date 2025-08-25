@@ -45,37 +45,38 @@
       </div>
     </div>
 
-    <script>
-      function dislikeItem(button) {
-        const item = button.closest(".item");
-        const postTitle = item.querySelector(".text").innerText.trim();
+<script>
+  function dislikeItem(button) {
+    // گرفتن آیتم و عنوان پست
+    const item = button.closest(".item");
+    const postTitle = item.querySelector(".text").innerText.trim();
 
-        const message = prompt(
-          "لطفاً دلیلتان را بنویسید که چرا دیس لایک کردید."
-        );
-        if (message) {
-          const subject = `دیس‌لایک روی پست: ${postTitle}`;
-          const body = `کاربر روی پست زیر دیس‌لایک کرده است:\n\n"${postTitle}"\n\nپیام کاربر:\n${message}`;
+    // پیام کاربر
+    const message = prompt("لطفاً دلیلتان را بنویسید که چرا دیس لایک کردید.");
+    if (message) {
+      // عنوان و متن ایمیل
+      const subject = `دیس‌لایک روی پست: ${postTitle}`;
+      const body = `کاربر روی پست زیر دیس‌لایک کرده است:\n\n"${postTitle}"\n\nپیام کاربر:\n${message}`;
 
-          const mailtoLink = `mailto:developer-iko-mike@gmail.com?subject=${encodeURIComponent(
-            subject
-          )}&body=${encodeURIComponent(body)}`;
-          window.location.href = mailtoLink;
-        }
-      }
+      // لینک mailto با گیرنده درست
+      const mailtoLink = `mailto:developer-iko-mike@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-      function likeItem(button) {
-        const item = button.closest(".item");
-        const postTitle = item.querySelector(".text").innerText.trim();
+      // باز کردن ایمیل کلاینت کاربر با یک کلیک
+      window.location.href = mailtoLink;
+    } 
+  }
 
-        let likes = localStorage.getItem("likes") || 0;
-        likes++;
-        localStorage.setItem("likes", likes);
+  function likeItem(button) {
+    const item = button.closest(".item");
+    const postTitle = item.querySelector(".text").innerText.trim();
 
-        alert(
-          `شما پست "${postTitle}" را لایک کردید. تعداد کل لایک‌ها: ${likes}`
-        );
-      }
-    </script>
+    let likes = localStorage.getItem("likes") || 0;
+    likes++;
+    localStorage.setItem("likes", likes);
+
+    alert(`شما پست "${postTitle}" را لایک کردید. تعداد کل لایک‌ها: ${likes}`);
+  }
+</script>
+
   </body>
 </html>
