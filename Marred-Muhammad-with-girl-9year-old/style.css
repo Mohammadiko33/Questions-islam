@@ -1,0 +1,94 @@
+   @font-face {
+      font-family: "Vazir";
+      src: url("../Vazir.woff2") format("woff2");
+    }
+
+    body {
+      font-family: "Vazir", sans-serif;
+      margin: 0;
+      background: #f4f7f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 1260px;
+      margin: auto;
+      padding: 40px 20px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 4px;
+      background-color: #ffcc00;
+      margin: 10px auto;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #555;
+      margin-top: 30px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: #444;
+      margin-top: 20px;
+      text-align: justify;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #ddd;
+      margin: 40px 0;
+    }
+
+    .note {
+      margin-top: 40px;
+      padding: 25px;
+      background: #f1f8ff;
+      border-left: 6px solid #007acc;
+      border-radius: 8px;
+    }
+
+    .note h2 {
+      color: #007acc;
+      font-size: 24px;
+    }
+
+    .note p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .highlight {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+    }
