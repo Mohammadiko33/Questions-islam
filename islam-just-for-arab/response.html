@@ -163,35 +163,9 @@
     </div>
 
     <script>
-      // نمایش پاسخ بعد از تماشای کامل ویدیو
-      const video = document.getElementById("introVideo");
-      const answerCard = document.getElementById("answerCard");
-      const watchHint = document.getElementById("watchHint");
+        import setLocalItem from "../base/base.js"
 
-      const KEY = "videoWatched-arabicClaim";
-      const hasWatched = localStorage.getItem(KEY) === "true";
-
-      function showAnswer() {
-        answerCard.classList.remove("hidden");
-        answerCard.classList.add("reveal");
-        if (watchHint) watchHint.style.display = "none";
-      }
-
-      if (hasWatched) {
-        showAnswer();
-      } else {
-        answerCard.classList.add("hidden");
-      }
-
-      video.addEventListener("ended", () => {
-        localStorage.setItem(KEY, "true");
-        showAnswer();
-      });
-
-      document.addEventListener("visibilitychange", () => {
-        if (!answerCard.classList.contains("hidden")) return;
-        if (localStorage.getItem(KEY) === "true") showAnswer();
-      });
+        setLocalItem({keyName: "arabicClaim"})
     </script>
   </body>
 </html>
