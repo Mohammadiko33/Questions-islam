@@ -1,4 +1,4 @@
-export default function setLocalItem({
+function setLocalItem({
   keyName,
   videoId = "introVideo",
   answerId = "answerCard",
