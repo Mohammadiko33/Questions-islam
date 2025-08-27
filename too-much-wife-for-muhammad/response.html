@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ادعای ملحد — پاسخ</title>
+    <!-- استایل پایه -->
+    <link rel="stylesheet" href="../base/base.css" />
+    <style>
+      .evidence {
+        text-align: center;
+        margin: 16px 0;
+      }
+      .evidence img {
+        max-width: 100%;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- بخش ۱ -->
+      <div class="card card--claim">
+        <video id="video1" src="./claim-part1.mp4" controls></video>
+      </div>
+
+      <div id="answer1" class="card card--answer hidden">
+        <h2>جواب</h2>
+        <p>عه !؟ همچین آیه نداریم !</p>
+        <div class="evidence">
+          <img src="./evidence/1.png" alt="سوره احزاب آیه 50" />
+        </div>
+        <p>
+          خدا نمیگه زنان فراوانی به تو حلال کردیم، خدا میگه: <br />
+          <strong>
+            ای پیامبر ما همسران تو رو که مهرشان را پرداخت کرده ای برای تو حلال
+            کردیم
+          </strong>
+        </p>
+      </div>
+
+      <!-- بخش ۲ -->
+      <div id="block2" class="hidden">
+        <div class="card card--claim">
+          <video id="video2" src="./claim-part2.mp4" controls></video>
+        </div>
+        <div id="answer2" class="card card--answer hidden">
+          <h2>ادامه جواب</h2>
+          <p>
+            مگه بقیه نمیتونن با دختر دایی و دختر عمو و دختر خاله و دختر عمه
+            ازدواج کنن؟!
+          </p>
+        </div>
+      </div>
+
+      <!-- بخش ۳ -->
+      <div id="block3" class="hidden">
+        <div class="card card--claim">
+          <video id="video3" src="./claim-part3.mp4" controls></video>
+        </div>
+        <div id="answer3" class="card card--answer hidden">
+          <h2>ادامه جواب</h2>
+          <p>
+            یعنی الان اگر یک خانمی از یک آقایی خوشش بیاد و بهش پیشنهاد ازدواج
+            بده اون آقا نمیتونه باهاش ازواج کنه؟ میتونه، ولی با پرداخت مهریه ولو
+            یک شاخه گل. <br />
+            در اینجا که خدا میگه:
+          </p>
+          <p>
+            <strong>
+              این حکم مختص پیامبره: اینکه بدون پرداخت مهریه پیامبر میتونه باهاش
+              ازدواج کنه
+            </strong>
+          </p>
+          <p>
+            این درحالی هست که ازدواج پیامبر با خانمی بدون پرداخت مهریه هرگز ثابت
+            نشده. خیلی از احکامه که مخصوص پیامبره مثل نماز تهجد که بر پیامبر
+            واجب بود ولی برای ما نیست.
+          </p>
+        </div>
+      </div>
+
+      <!-- بخش ۴ -->
+      <div id="block4" class="hidden">
+        <div class="card card--claim">
+          <video id="video4" src="./claim-part4.mp4" controls></video>
+        </div>
+        <div id="answer4" class="card card--answer hidden">
+          <h2>ادامه جواب</h2>
+          <p>
+            نقش خداوند بعنوان خالق و آفریدگار و قانونگذار اینه که <br />
+            <strong>احکام و قوانین رو تعیین میکنه</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- بخش ۵ -->
+      <div id="block5" class="hidden">
+        <div class="card card--claim">
+          <video id="video5" src="./claim-part5.mp4" controls></video>
+        </div>
+        <div id="answer5" class="card card--answer hidden">
+          <h2>ادامه جواب</h2>
+          <p>
+            همه قرآن فقط این نیست، قرآن ۶۲۳۶ آیه داره که درمورد کیهان و جهان
+            هستی و هدف خلقت توضیح داده. فقط ۱۳ آیه مربوط به مسائل زندگی پیامبره.
+          </p>
+          <p>
+            قرآن کتاب کیهان‌شناسی نیست که انتظار داشته باشیم فقط درمورد ستاره‌ها
+            و کهکشان‌ها حرف بزنه. <br />
+            <strong>قرآن کتاب هدایت است.</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function setupStep(videoId, answerId, nextBlockId, keyName) {
+        const video = document.getElementById(videoId);
+        const answer = document.getElementById(answerId);
+        const nextBlock = nextBlockId
+          ? document.getElementById(nextBlockId)
+          : null;
+
+        if (!video) return;
+
+        const KEY = `watched-${keyName}`;
+        const watched = localStorage.getItem(KEY) === "true";
+
+        // اگر قبلا دیده شده بود → همون لحظه نشون بده
+        if (watched) {
+          answer.classList.remove("hidden");
+          answer.classList.add("reveal");
+          if (nextBlock) nextBlock.classList.remove("hidden");
+        }
+
+        video.addEventListener("ended", () => {
+          localStorage.setItem(KEY, "true");
+          answer.classList.remove("hidden");
+          answer.classList.add("reveal");
+          if (nextBlock) nextBlock.classList.remove("hidden");
+        });
+      }
+
+      setupStep("video1", "answer1", "block2", "part1");
+      setupStep("video2", "answer2", "block3", "part2");
+      setupStep("video3", "answer3", "block4", "part3");
+      setupStep("video4", "answer4", "block5", "part4");
+      setupStep("video5", "answer5", null, "part5");
+    </script>
+  </body>
+</html>
