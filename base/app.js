@@ -110,7 +110,7 @@ const posts = [
   {
     id: 14,
     title: "تناقضات قرآن در مورد خلقت انسان",
-    cover: "./Quran-contradictions-on-human-creation/cover.png",
+    cover: "./Quran-contradictions-on-human-creation/cover.jpg",
     link: "./Quran-contradictions-on-human-creation/response.html",
   },
 ];
