@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ادعای ملحد — خلقت انسان</title>
+    <link rel="stylesheet" href="../base/base.css" />
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title">ادعای ملحد</h1>
+
+      <!-- کارت ادعا + ویدیو -->
+      <div class="card card--claim">
+        <div class="video-wrapper">
+          <video id="video1" src="./claim.mp4" controls></video>
+        </div>
+
+        <!-- راهنمای دیدن ویدیو -->
+        <div id="watchHint" class="watch-hint" aria-live="polite">
+          <svg
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style="margin-top: 2px"
+          >
+            <path
+              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+              stroke="#1d4ed8"
+              stroke-width="1.5"
+            />
+            <path
+              d="M12 6v6l3 3"
+              stroke="#1d4ed8"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div>
+            برای دیدن <strong>پاسخ</strong>، ابتدا ویدیو را تا انتها تماشا کنید.
+          </div>
+        </div>
+      </div>
+
+      <!-- پاسخ -->
+      <div id="answerCard" class="card card--answer hidden">
+        <h2># جواب</h2>
+        <p>
+          آیا واقعا در قرآن تناقض وجود دارد درمورد خلقت انسان؟ از نظر علم پزشکی
+          جرم سلول‌های انسان از ۶۵ تا ۹۰ درصد آب تشکیل شده. پس آنجایی که خداوند
+          در <strong>سوره نور، آیه ۴۵</strong> می‌فرماید:
+        </p>
+        <blockquote>ما شما را از آب خلق کردیم</blockquote>
+        <p>
+          هیچ تناقضی وجود ندارد. ۹۹٪ جرم بدن انسان از شش عنصر اصلی (<strong
+            >اکسیژن، نیتروژن، هیدروژن، کربن، کلسیم، فسفر</strong
+          >) و حدود ۰.۸۵٪ از عناصر دیگر مانند پتاسیم، گوگرد، سدیم، منیزیم و کلر
+          تشکیل شده است.
+        </p>
+        <p>
+          شگفت‌آور آن است که همین عناصر در خاک نیز یافت می‌شوند. شباهت ۹۹٪ عناصر
+          بدن انسان و گل (مخلوط آب و خاک) دقیقاً همان نکته‌ای است که قرآن به آن
+          اشاره کرده است.
+        </p>
+        <p>در <strong>سوره حج، آیه ۵</strong> خداوند می‌فرماید:</p>
+        <blockquote>ما خاک را تبدیل به نطفه می‌کنیم</blockquote>
+        <p>
+          علم تجربی نشان داده که نطفه نیاز به خون دارد، خون نیاز به مواد غذایی
+          دارد و مواد غذایی نیاز به خاک دارد؛ یعنی یک سلسله زنجیره‌ای که به هم
+          متصل است.
+        </p>
+        <p>
+          اگر خاکی نباشد، مواد غذایی نیست؛ اگر مواد غذایی نباشد، خون و انرژی
+          نیست و اگر خونی نباشد، نطفه‌ای نیست.
+        </p>
+        <p>
+          چطور ۱۴۰۰ سال پیش قرآن به این موضوع اشاره کرده؟ آیا آن زمان اینترنت
+          بوده؟ یا پیامبر سفر در زمان داشت؟ حقیقت روشن است:
+          <strong>قرآن کلام الله است</strong>.
+        </p>
+
+        <!-- نکات تکمیلی -->
+        <div id="extraBox" class="extra-box hidden">
+          <h2>نکات تکمیلی</h2>
+          <ul>
+            <li>
+              جرم سلول‌های انسان ۶۵ تا ۹۰ درصد آب است. (منبع:
+              <a
+                href="https://www.usgs.gov/special-topics/water-science-school/science/water-you-water-and-human-body"
+                target="_blank"
+                >USGS</a
+              >)
+            </li>
+            <li>
+              بدن انسان شامل عناصر اکسیژن، نیتروژن، هیدروژن، کربن، کلسیم و فسفر
+              است که عناصر تشکیل‌دهنده خاک نیز می‌باشند. (منبع:
+              <a
+                href="https://www.ncbi.nlm.nih.gov/books/NBK547746/"
+                target="_blank"
+                >NCBI</a
+              >)
+            </li>
+            <li>
+              این هماهنگی میان داده‌های علمی و آیات قرآن نشان می‌دهد که تناقضی
+              وجود ندارد و <strong>اعجاز علمی قرآن</strong> مطرح است.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="../base/base.js"></script>
+    <script>
+      setLocalItem({
+        keyName: "creationHumanClaim",
+        videoId: "video1",
+        answerId: "answerCard",
+        hintId: "extraBox",
+        watchHintId: "watchHint", // هشدار راهنما
+      });
+    </script>
+  </body>
+</html>

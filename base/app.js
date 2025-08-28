@@ -77,7 +77,6 @@ const posts = [
     cover: "./no-mojesa-in-quran/cover.jpg",
     link: "./no-mojesa-in-quran/response.html",
   },
-
   {
     id: 9,
     title: "چالش بزرگ اسلام توسط قار مرموز",
@@ -108,6 +107,12 @@ const posts = [
     cover: "./too-much-wife-for-muhammad/cover.png",
     link: "./too-much-wife-for-muhammad/response.html",
   },
+  {
+    id: 14,
+    title: "تناقضات قرآن در مورد خلقت انسان",
+    cover: "./Quran-contradictions-on-human-creation/cover.png",
+    link: "./Quran-contradictions-on-human-creation/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
@@ -115,14 +120,14 @@ const container = document.querySelector(".container");
 posts
   .slice()
   .reverse()
-  .forEach((post) => {
+  .forEach(({link , cover , title}) => {
     const item = document.createElement("div");
     item.classList.add("item");
     item.innerHTML = `
-    <a href="${post.link}">
-      <img src="${post.cover}" alt="${post.title}" />
+    <a href="${link}">
+      <img src="${cover}" alt="${title}" />
       <div class="gradient"></div>
-      <div class="text">${post.title}</div>
+      <div class="text">${title}</div>
     </a>
     <div class="actions">
       <button class="like-btn" onclick="likeItem(this)">لایک</button>
