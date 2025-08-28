@@ -170,10 +170,11 @@ p {
    نوار راهنما/هشدار
 --------------------------------*/
 .watch-hint {
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  gap: 10px;
-  align-items: start;
+  display: flex; /* استفاده از flex به جای grid */
+  flex-wrap: nowrap; /* جلوگیری از شکستن خط */
+  align-items: center; /* وسط چین عمودی */
+  justify-content: center; /* وسط چین افقی */
+  gap: 4px; /* فاصله بین آیکون و متن */
   background: #ebf5ff;
   color: #0f3973;
   border-right: 4px solid #3b82f6;
@@ -181,6 +182,7 @@ p {
   padding: 12px 14px;
   margin-top: 14px;
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.08);
+  white-space: nowrap; /* جلوگیری از شکستن خط */
 }
 
 /* -------------------------------
@@ -351,6 +353,25 @@ p {
   .card {
     padding: 16px;
   }
+}
+
+/* تصاویر */
+.img-block {
+  display: flex; /* چینش افقی */
+  flex-wrap: wrap; /* اگر جا کم شد، به خط بعدی میره */
+  gap: 12px; /* فاصله بین تصاویر */
+  justify-content: center; /* وسط چین کردن */
+  margin: 14px auto;
+}
+
+.img-block img {
+  width: 100%; /* حداکثر عرض کانتینر */
+  max-width: 300px; /* محدود کردن حداکثر عرض هر تصویر */
+  height: auto; /* ارتفاع متناسب */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9eef5;
+  object-fit: contain; /* جلوگیری از کشیده شدن */
 }
 
 /* لپ‌تاپ‌های کوچک */

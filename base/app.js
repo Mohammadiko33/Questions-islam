@@ -113,6 +113,12 @@ const posts = [
     cover: "./Quran-contradictions-on-human-creation/cover.jpg",
     link: "./Quran-contradictions-on-human-creation/response.html",
   },
+  {
+    id: 15,
+    title: "اسلام و ریشه پنهان آن",
+    cover: "./Islam-and-its-hidden-roots/cover.jpg",
+    link: "./Islam-and-its-hidden-roots/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)

@@ -3,7 +3,7 @@ function setLocalItem({
   videoId = "introVideo",
   answerId = "answerCard",
   hintId = null,
-  watchHintId = null
+  watchHintId = null,
 }) {
   const video = document.getElementById(videoId);
   const answerCard = document.getElementById(answerId);
@@ -40,8 +40,71 @@ function setLocalItem({
   });
 
   document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible" && localStorage.getItem(KEY) === "true") {
+    if (
+      document.visibilityState === "visible" &&
+      localStorage.getItem(KEY) === "true"
+    ) {
       showAnswer();
     }
   });
+}
+
+function setLocalItemStep({ watchHintId, steps }) {
+  const hint = document.getElementById(watchHintId);
+  let currentStep = 0;
+
+  // اگر قبلا دیده شده، از localStorage
+  steps.forEach((s, idx) => {
+    const watched = localStorage.getItem(s.videoId) === "true";
+    if (watched) {
+      document.getElementById(s.answerId).classList.remove("hidden");
+      document
+        .getElementById(s.videoId)
+        .parentElement.parentElement.classList.remove("hidden");
+      currentStep = idx + 1;
+    } else {
+      if (idx !== currentStep) {
+        document
+          .getElementById(s.videoId)
+          .parentElement.parentElement.classList.add("hidden");
+        document.getElementById(s.answerId).classList.add("hidden");
+      }
+    }
+  });
+
+  if (currentStep >= steps.length) {
+    hint.style.display = "none";
+    document.getElementById("extraBox").classList.remove("hidden");
+    return;
+  }
+
+  function playStep(idx) {
+    if (idx >= steps.length) {
+      hint.style.display = "none";
+      document.getElementById("extraBox").classList.remove("hidden");
+      return;
+    }
+
+    const step = steps[idx];
+    const video = document.getElementById(step.videoId);
+    const answer = document.getElementById(step.answerId);
+
+    video.parentElement.parentElement.classList.remove("hidden");
+    video.currentTime = 0;
+    answer.classList.add("hidden");
+
+    video.onended = () => {
+      answer.classList.remove("hidden");
+      localStorage.setItem(step.videoId, "true"); // ذخیره وضعیت در localStorage
+      currentStep++;
+      if (currentStep < steps.length) {
+        playStep(currentStep);
+      } else {
+        hint.style.display = "none";
+        document.getElementById("extraBox").classList.remove("hidden");
+      }
+    };
+  }
+
+  playStep(currentStep);
 }
