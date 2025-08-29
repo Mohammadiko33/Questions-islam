@@ -119,6 +119,12 @@ const posts = [
     cover: "./Islam-and-its-hidden-roots/cover.jpg",
     link: "./Islam-and-its-hidden-roots/response.html",
   },
+  {
+    id: 16,
+    title: "خنده دار ترین سوتی قران دریای شیرین",
+    cover: "./Quran-varse--sweet-water/cover.png",
+    link: "./Quran-varse--sweet-water/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
