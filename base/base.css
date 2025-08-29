@@ -78,7 +78,7 @@ button {
    کانتینر
 --------------------------------*/
 .container {
-  max-width: 1260px;
+  max-width: 994px;
   margin: 0 auto;
   padding: 24px 20px 64px;
 }
@@ -377,7 +377,7 @@ p {
 /* لپ‌تاپ‌های کوچک */
 @media (max-width: 1024px) {
   .container {
-    max-width: 920px;
+    max-width: 768px;
   }
   .page-title {
     font-size: 1.5rem;
@@ -390,14 +390,14 @@ p {
 /* دسکتاپ معمولی */
 @media (max-width: 1280px) {
   .container {
-    max-width: 1100px;
+    max-width: 994px;
   }
 }
 
 /* مانیتورهای خیلی بزرگ */
 @media (min-width: 1600px) {
   .container {
-    max-width: 1440px;
+    max-width: 1080px;
   }
   body {
     font-size: 18px;
