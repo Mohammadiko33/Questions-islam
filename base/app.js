@@ -125,6 +125,12 @@ const posts = [
     cover: "./Quran-varse--sweet-water/cover.png",
     link: "./Quran-varse--sweet-water/response.html",
   },
+  {
+    id: 17,
+    title: "داستان عجیب خلقت ، اشتباه بزرگ قران",
+    cover: "./strange-story-of-creation/cover.png",
+    link: "./strange-story-of-creation/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
