@@ -143,6 +143,12 @@ const posts = [
     cover: "./ashab-kaff/cover.png",
     link: "./ashab-kaff/response.html",
   },
+  {
+    id: 20,
+    title: "حجر الاسود ، آلت زنانه است ؟",
+    cover: "./hajarasvad-is-woman-psy/cover.jpg",
+    link: "./hajarasvad-is-woman-psy/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
