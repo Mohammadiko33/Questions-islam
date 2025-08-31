@@ -131,6 +131,12 @@ const posts = [
     cover: "./strange-story-of-creation/cover.png",
     link: "./strange-story-of-creation/response.html",
   },
+  {
+    id: 18,
+    title: "ازدواج با خواهر و مادر در اسلام",
+    cover: "./marred-with-mother-or-sister-in-islam/cover.png",
+    link: "./marred-with-mother-or-sister-in-islam/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
