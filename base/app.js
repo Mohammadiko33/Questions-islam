@@ -137,6 +137,12 @@ const posts = [
     cover: "./marred-with-mother-or-sister-in-islam/cover.png",
     link: "./marred-with-mother-or-sister-in-islam/response.html",
   },
+  {
+    id: 19,
+    title: "معجزه دروغین اصحاب کهف",
+    cover: "./ashab-kaff/cover.png",
+    link: "./ashab-kaff/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
