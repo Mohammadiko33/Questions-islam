@@ -149,6 +149,12 @@ const posts = [
     cover: "./hajarasvad-is-woman-psy/cover.jpg",
     link: "./hajarasvad-is-woman-psy/response.html",
   },
+  {
+    id: 21,
+    title: "پاره شدن آسمان ، اشتباه علمی قرآن",
+    cover: "./broken-gallxy/cover.png",
+    link: "./broken-gallxy/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
