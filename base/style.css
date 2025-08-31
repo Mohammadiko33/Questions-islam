@@ -50,6 +50,10 @@ input {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.item:hover img{
+  filter: blur(1px);
+}
+
 @media only screen and (min-width: 768px) {
   .item:hover {
     transform: scale(1.05);
@@ -62,15 +66,23 @@ input {
   object-fit: cover;
   display: block;
   filter: blur(4px);
+  transition: all 0.15s ease-in-out 0.02s;
 }
 
 .gradient {
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 0;
   right: 0;
-  top: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.05));
+  height: 5rem;
+  transform: translateY(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0.6) 0%,
+    rgba(0,0,0,0.3) 40%,
+    rgba(0,0,0,0) 100%
+  );
+  pointer-events: none;
 }
 
 .text {
