@@ -170,11 +170,11 @@ p {
    نوار راهنما/هشدار
 --------------------------------*/
 .watch-hint {
-  display: flex; /* استفاده از flex به جای grid */
-  flex-wrap: nowrap; /* جلوگیری از شکستن خط */
-  align-items: center; /* وسط چین عمودی */
-  justify-content: center; /* وسط چین افقی */
-  gap: 4px; /* فاصله بین آیکون و متن */
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   background: #ebf5ff;
   color: #0f3973;
   border-right: 4px solid #3b82f6;
@@ -322,7 +322,6 @@ p {
 /* -------------------------------
    واکنش‌گرا
 --------------------------------*/
-/* موبایل کوچک (خیلی ریز) */
 @media (max-width: 480px) {
   body {
     font-size: 14px;
@@ -339,7 +338,6 @@ p {
   }
 }
 
-/* موبایل و تبلت */
 @media (max-width: 768px) {
   .container {
     padding: 16px 14px 48px;
@@ -355,26 +353,33 @@ p {
   }
 }
 
-/* تصاویر */
 .img-block {
-  display: flex; /* چینش افقی */
-  flex-wrap: wrap; /* اگر جا کم شد، به خط بعدی میره */
-  gap: 12px; /* فاصله بین تصاویر */
-  justify-content: center; /* وسط چین کردن */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
   margin: 14px auto;
 }
 
 .img-block img {
-  width: 100%; /* حداکثر عرض کانتینر */
-  max-width: 300px; /* محدود کردن حداکثر عرض هر تصویر */
-  height: auto; /* ارتفاع متناسب */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   border: 1px solid #e9eef5;
-  object-fit: contain; /* جلوگیری از کشیده شدن */
+  object-fit: contain;
 }
 
-/* لپ‌تاپ‌های کوچک */
+a {
+  color: #00a2ff;
+  transition: all 0.15s ease-in-out 0.02s;
+}
+
+a:hover {
+  color: #0071b3;
+}
+
 @media (max-width: 1024px) {
   .container {
     max-width: 768px;
@@ -387,14 +392,12 @@ p {
   }
 }
 
-/* دسکتاپ معمولی */
 @media (max-width: 1280px) {
   .container {
     max-width: 994px;
   }
 }
 
-/* مانیتورهای خیلی بزرگ */
 @media (min-width: 1600px) {
   .container {
     max-width: 1080px;

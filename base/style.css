@@ -50,7 +50,7 @@ input {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.item:hover img{
+.item:hover img {
   filter: blur(1px);
 }
 
@@ -78,9 +78,9 @@ input {
   transform: translateY(-50%);
   background: radial-gradient(
     ellipse at center,
-    rgba(0,0,0,0.6) 0%,
-    rgba(0,0,0,0.3) 40%,
-    rgba(0,0,0,0) 100%
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0) 100%
   );
   pointer-events: none;
 }
