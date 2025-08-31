@@ -155,6 +155,12 @@ const posts = [
     cover: "./broken-gallxy/cover.png",
     link: "./broken-gallxy/response.html",
   },
+  {
+    id: 22,
+    title: "داستان شراب و حوری بهشت",
+    cover: "./nymph-and-liquor/cover.jpg",
+    link: "./nymph-and-liquor/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
