@@ -167,6 +167,12 @@ const posts = [
     cover: "./no-I-do-Allah/cover.png",
     link: "./no-I-do-Allah/response.html",
   },
+  {
+    id: 23,
+    title: "سوتی بزرگ قران همه موجودات را جفت افریدیم",
+    cover: "./pairs-In-Creation/cover.png",
+    link: "./pairs-In-Creation/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
