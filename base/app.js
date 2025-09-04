@@ -173,6 +173,12 @@ const posts = [
     cover: "./pairs-In-Creation/cover.png",
     link: "./pairs-In-Creation/response.html",
   },
+  {
+    id: 24,
+    title: "توصیه پیامبر به خودن آب مگس",
+    cover: "./fly-in-drink-muhammad-say/cover.png",
+    link: "./fly-in-drink-muhammad-say/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
