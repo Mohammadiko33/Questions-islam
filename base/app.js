@@ -161,6 +161,12 @@ const posts = [
     cover: "./nymph-and-liquor/cover.jpg",
     link: "./nymph-and-liquor/response.html",
   },
+  {
+    id: 22,
+    title: "چرا نام پدر پیامبر عبدالله بوده مگر الله را محمد معرفی نکرده",
+    cover: "./no-I-do-Allah/cover.png",
+    link: "./no-I-do-Allah/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
