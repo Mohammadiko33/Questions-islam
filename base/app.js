@@ -185,6 +185,12 @@ const posts = [
     cover: "./fly-in-drink-muhammad-say/cover.png",
     link: "./fly-in-drink-muhammad-say/response.html",
   },
+  {
+    id: 26,
+    title: "خطرات مرگبار روزه گرفتن",
+    cover: "./fasting-autophagy/cover.png",
+    link: "./fasting-autophagy/response.html",
+  },
 ];
 
 // ساخت آیتم‌ها و اضافه کردن به صفحه (از آخر به اول)
