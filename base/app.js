@@ -175,6 +175,12 @@ const posts = [
   },
   {
     id: 24,
+    title: "تناقضات علمی قرآن ، کوه ها میخ های زمینند",
+    cover: "./mountains-stabilizers/cover.jpg",
+    link: "./mountains-stabilizers/response.html",
+  },
+  {
+    id: 25,
     title: "توصیه پیامبر به خودن آب مگس",
     cover: "./fly-in-drink-muhammad-say/cover.png",
     link: "./fly-in-drink-muhammad-say/response.html",
